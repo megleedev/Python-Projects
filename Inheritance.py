@@ -1,24 +1,27 @@
-# Creates a class called 'Animal'
+# Creates a class called Animal
 # Animal is created with two variable names for attributes with default values
 # Animal is also the Parent class for other classes
 class Animal:
     species = " "
     predator = True
 
-# Creates a Bird class that inherits from the Animal parent class
+# Creates a Bird child class that inherits from the Animal parent class
 # Bird is created with two variable names for attributes with default values
 class Bird (Animal):
     color = " "
     size = " "
 
-# Creates an Eagle class that inherits from both the Animal parent class -
-# and the Bird class
-# Eagle is created with two variable names for attributes with default values
+# Creates a LargeBird child class that inherits from both the Animal
+# parent class and the Bird child class
+# LargeBird is created with two variable names for attributes with default
+# values
 class LargeBird (Bird, Animal):
     weight = 0.00
     height = 0
 
 # I got concerned that the above didn't work so I made sure
+# Each class has an instantiated object and actual values replacing the
+# default values then printed to console
 if __name__ == "__main__":
 
     LargeCat = Animal ()
