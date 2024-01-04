@@ -8,13 +8,16 @@ class ProtectedClass:
     def getPrivateNum (self):
         print (self.__privateNum)
 
-# Function within ProtectedClass to print the protected variable
-    def getProtectedNum (self):
-        print (self._protectedNum)
+    def setPrivateNum (self, private):
+        self.__privateNum = private
 
 # Creates a ProtectedClass object
-# Calls the getPrivateNum and the getProtectedNum functions
+# Calls getPrivateNum, sets PrivateNum to a new value, and then
+# calls getPrivateNum again
+# Prints protectedNum from the object
 if __name__ == "__main__":
     obj = ProtectedClass ()
-    obj.getPrivateNum()
-    obj.getProtectedNum()
+    obj.getPrivateNum ()
+    obj.setPrivateNum (33)
+    obj.getPrivateNum ()
+    print (obj._protectedNum)
